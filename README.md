@@ -1,4 +1,4 @@
-
+#### kaldi-fst
 
 #### Installation
 
@@ -16,3 +16,7 @@ make depend
 make
 cd ..
 ```
+
+#### Usage
+
+See `./run.sh` for usage.
