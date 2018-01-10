@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# make-graph.sh
+# hclg.sh
 # 
 # Adapted from `mkgraph.sh` from KALDI toolkit
 
@@ -31,9 +31,9 @@ mkdir -p .tmp
 # --
 # Check arguments
 
-required="$langdir/L.fst $langdir/phones.txt $langdir/words.txt $langdir/phones/silence.csl $langdir/phones/disambig.int $model $tree"
+required="$g_fst $langdir/L.fst $langdir/phones.txt $langdir/words.txt $langdir/phones/silence.csl $langdir/phones/disambig.int $model $tree"
 for f in $required; do
-  [ ! -f $f ] && echo "mkgraph.sh: expected $f to exist" && exit 1;
+  [ ! -f $f ] && echo "hclg.sh: expected $f to exist" && exit 1;
 done
 
 # --
