@@ -1,17 +1,6 @@
-mkdir -p _results/small
+#!/bin/bash
 
-# --
-# Download model files
+# run.sh
 
-mkdir -p ./_data/exp
-# ... wget ...
-
-# --
-# Run small example
-
-mkdir -p _data/small
-# ... wget ...
-
-export KALDI_HOME="/srv/data/kaldi"
-export PATH="$KALDI_HOME/tools/openfst/bin:$KALDI_HOME/src/fstbin/:$KALDI_HOME/src/bin/:$PATH"
-time ./make-graph.sh ./_data/G.small.fst ./_results/small-2
+export KALDI_HOME="/home/bjohnson/software/kaldi"
+time ./hclg.sh ./_data/G.small.fst ./_results/small-2

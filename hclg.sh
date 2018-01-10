@@ -6,6 +6,10 @@
 
 set -o pipefail
 
+echo 'export PATH="$KALDI_HOME/tools/openfst/bin:$KALDI_HOME/src/fstbin/:$KALDI_HOME/src/bin/:$PATH"' > .paths.sh
+. ./.paths.sh
+rm .paths.sh
+
 if [ $# != 2 ]; then
    echo "Usage: make-graph.sh <g-fst> <graphdir>"
    echo "e.g.: make-graph.sh _data/G.small.fst _results/small/"
